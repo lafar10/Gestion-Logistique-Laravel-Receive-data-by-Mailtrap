@@ -39,7 +39,7 @@ class FrontController extends Controller
             'vehicule_type'
         ]);
 
-        Mail::to('ayoub_lafar@hotmail.com')
+        Mail::to('ayoub9@gmail.com')
             ->send(new CreateCommades($data));
 
         return redirect()->back()->with('flash', 'success');
