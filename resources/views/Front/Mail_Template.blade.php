@@ -145,7 +145,8 @@
                 <tr>
 
                  <td >{{$dataReceived['lieu_ramassage']}}</td>
-                <td >{{$dataReceived['lieu_depose']}}</td>
+                 <td >{{$dataReceived['lieu_depose']}}</td>
+                 <td >{{$dataReceived['type_vehicule']}}</td>
                 </tr>
               </tbody>
         </table>
