@@ -382,10 +382,6 @@
                         <a href="{{route('index')}}#sec-4"><img src="images/a4.png" style="width:27px;height:32px;"> {{ __('home.connectez vous') }}</a>
                     </li>
                     <hr>
-                    <li class="nav-link">
-                        <a id="aa" href="{{route('yesterday.get.matches')}}">مباريات الأمس </a>
-                    </li>
-                    <hr>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
