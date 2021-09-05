@@ -35,7 +35,8 @@ class FrontController extends Controller
             'heure',
             'minutes',
             'period',
-            'etat'
+            'etat',
+            'vehicule_type'
         ]);
 
         Mail::to('ayoub_lafar@hotmail.com')

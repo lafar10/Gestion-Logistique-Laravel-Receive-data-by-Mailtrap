@@ -115,8 +115,7 @@
                 <th scope="col">Nom Complet</th>
                 <th scope="col">Email</th>
                 <th scope="col">Télé</th>
-                <th scope="col">Lieu Départ</th>
-                <th scope="col">Lieu Arrivée</th>
+                
               </tr>
             </thead>
             <tbody>
@@ -124,8 +123,7 @@
                 <td >{{$dataReceived['name']}} {{$dataReceived['prenom']}}</td>
                 <td >{{$dataReceived['email']}}</td>
                 <td >{{$dataReceived['tel']}}</td>
-                <td >{{$dataReceived['lieu_ramassage']}}</td>
-                <td >{{$dataReceived['lieu_depose']}}</td>
+                
               </tr>
             </tbody>
           </table>
@@ -133,23 +131,24 @@
           <br>
           <br>
 
-       <!-- <table align="right">
+     <table >
 
             <thead>
                 <tr>
 
-                  <th scope="col">Poids Total</th>
-                  <th scope="col">Montant TTC</th>
+                    <th scope="col">Lieu Départ</th>
+                    <th scope="col">Lieu Arrivée</th>
+                    <th scope="col">Véhicule</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
 
-                  <td data-label="Amount"> KG</td>
-                  <td data-label="Period"> DH's</td>
+                 <td >{{$dataReceived['lieu_ramassage']}}</td>
+                <td >{{$dataReceived['lieu_depose']}}</td>
                 </tr>
               </tbody>
-        </table>-->
+        </table>
 
     </div>
 
