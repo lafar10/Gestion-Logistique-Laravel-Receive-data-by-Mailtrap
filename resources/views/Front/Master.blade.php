@@ -199,8 +199,10 @@
                             <a href="{{route('index')}}"  align="center"><h3 style="font-style: italic;" ><img src="images/delivery-truck (1).png" style="width:80px;height:60px;margin-bottom:3px;" alt="Fayaj"> Fayaj</h3></a>
                         </div>
                         <!--/ End Logo -->
-                        <!--/ End Search Form -->
-                        <div class="mobile-nav"></div>
+                        <!--/ End Search Form
+                        <div class="mobile-nav"></div>-->
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">|||</button>
                     </div>
                 </div>
             </div>
@@ -355,6 +357,75 @@
     </footer>
     <!-- /End Footer Area -->
 
+    <div class="offcanvas offcanvas-end bg-dark text-orange" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            <h5 id="offcanvasRightLabel">القائمة</h5>
+        </div>
+        <div class="offcanvas-body" style="text-align:right;">
+
+                <ul class="navbar-nav ml-auto" >
+                    <li class="nav-link">
+                        <a href="{{route('index')}}#sec-1"><img src="images/aaa.png" style="width:29px;height:32px;"> {{ __('home.transporteur') }}</a>
+                    </li>
+                    <hr>
+                    <li class="nav-link">
+                        <a href="{{route('index')}}#sec-2"><img src="images/value.png" style="width:29px;height:32px;margin-bottom:3px;"> {{ __('home.notre valeur') }}</a>
+                    </li>
+                    <hr>
+                    <li class="nav-link">
+                        <a href="{{route('index')}}#sec-3"><img src="images/consult.png" style="width:29px;height:32px;"> {{ __('home.nos services') }}</a>
+                    </li>
+                    <hr>
+                    <li class="nav-link">
+                        <a href="{{route('index')}}#sec-4"><img src="images/a4.png" style="width:27px;height:32px;"> {{ __('home.connectez vous') }}</a>
+                    </li>
+                    <hr>
+                    <li class="nav-link">
+                        <a id="aa" href="{{route('yesterday.get.matches')}}">مباريات الأمس </a>
+                    </li>
+                    <hr>
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    <hr>
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link text-white" id="aa" href="{{ route('login') }}">دخول</a>
+                            </li>
+                        @endif
+                        <hr>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="btn btn-success"  href="{{ route('register') }}">تسجيل</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" id="aa"  class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a id="aa"  class="dropdown-item text-success" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    تسجيل الخروج
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+        </div>
+    </div>
 
 
     <script src="https://kit.fontawesome.com/aea6f500cc.js" crossorigin="anonymous"></script>
