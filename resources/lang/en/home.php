@@ -2,6 +2,7 @@
 
 return [
 
+    'menu' => 'Menu',
     'mon Compte' => 'Mon Compte',
     'logout' => 'Se déconnecter',
     'login' => 'Connexion',

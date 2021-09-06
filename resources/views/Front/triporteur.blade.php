@@ -39,7 +39,7 @@
                                                                                                                                                                                                                 style="text-align:left;border-radius:0%;"
                                                                                                                                                                                                             @endif >
                                                             <datalist id="datalistOptions">
-                                                                    <option ></option >
+                                                                  
                                                             </datalist>
                                                             @if($errors->has('lieu_ramassage'))
                                                                 <div class="error" style="color:red;">{{ $errors->first('lieu_ramassage') }}</div>
@@ -55,8 +55,7 @@
                                                                                                                                                                                         style="text-align:left;border-radius:0%;"
                                                                                                                                                                                     @endif >
                                                             <datalist id="datalistOptions">
-                                                                     <option ></option >
-
+                                                                    
                                                             </datalist>
                                                             @if($errors->has('lieu_depose'))
                                                                 <div class="error" style="color:red;">{{ $errors->first('lieu_depose') }}</div>

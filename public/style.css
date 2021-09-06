@@ -741,7 +741,7 @@ Version:1.0
 	top: 0;
 }
 .header.shop .middle-inner {
-	padding: 20px 0;
+	
 	background: #fff;
 	border-top: 1px solid #eee;
 }
@@ -5012,3 +5012,7 @@ Version:1.0
     margin-top:20px;
 }
 
+#menunav{
+    color:orange;
+    margin-top:80px;
+}
