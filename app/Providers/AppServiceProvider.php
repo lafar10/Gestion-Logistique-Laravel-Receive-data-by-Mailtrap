@@ -13,23 +13,23 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function boot(UrlGenerator $url)
     {
-        //
+        if(env('REDIRECT_HTTPS')) {
+            $url->formatScheme('https');
+        }
     }
 
     /**
-     * Bootstrap any application services.
+     * Register any application services.
      *
      * @return void
      */
-    public function boot()
+    public function register()
     {
-        $this->app['request']->server('HTTPS', 'on');
-        /*if(env('APP_ENV') !== 'local')
-        {
-           URL::forceScheme('https');
-        }*/
-        //Schema::defaultStringLength(191);
+        if(env('REDIRECT_HTTPS')) {
+            $this->app['request']->server->set('HTTPS', true);
+        }
     }
+}
 }
